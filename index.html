@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мен Веб-разработчик</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumJA2ftW5eqE30XAz1raRSqesFKuSS76A7Q&s">
+</head>
+<body>
+  <header>
+    <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider round"></span>
+        </label>
+        <span class="theme-label">🌙 Тёмная тема</span>
+      </div>
+      
+    <div class="avatar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumJA2ftW5eqE30XAz1raRSqesFKuSS76A7Q&s" alt="Мой аватар">
+    </div>
+    <h1><i class="fas fa-code"></i> Салам-Алейкум! Мен Веб-разработчикмин.</h1>
+    <p>Мощный жана 2025-жылга карата сайт тузом.</p>
+    <div class="header-buttons">
+      <a href="./skibidi.html" class="btn" download><i class="fas fa-file-download"></i>Мен жонундо</a>
+      <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i>Маалыматка чыгуу</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Мен жонундо</h2>
+      <p>
+        Мен Торобаев Миржигит Веб-разработчик! Мен html жана css программаны жакшы билем.
+      </p>
+    </section>
+    <main>
+    <section class="about">
+      <h2>Веб-разработчик жонундо маалымат.</h2>
+      <p>
+        Веб-разработчик — бул веб-сайттарды жана веб-тиркемелерди түзгөн адис. Ал интернетте иштеген программаларды, баракчаларды жана кызматтарды жаратат.
+      </p>
+    </section>
+    <section class="skills">
+        <h2>🧠 Кандай көндүмдөр керек?</h2>
+        <ul class="skill-list">
+          <li><i class="fab fa-html5"></i>Программалоо тилдерин билүү (HTML, CSS, JavaScript, ж.б.)</li>
+          <li><i class="fab fa-css3-alt"></i>Дизайн жана колдонуучу интерфейси тууралуу түшүнүк</li>
+          <li><i class="fab fa-js"></i>Команда менен иштей билүү</li>
+          <li><i class="fas fa-mobile-alt"></i>Жакшы логикалык ой жүгүртүү</li>
+        </ul>
+      </section>
+    
+
+    <section class="skills">
+      <h2>Навыки</h2>
+      <ul class="skill-list">
+        <li><i class="fab fa-html5"></i> HTML</li>
+        <li><i class="fab fa-css3-alt"></i> CSS</li>
+        <li><i class="fab fa-js"></i> JavaScript</li>
+        <li><i class="fas fa-mobile-alt"></i> Адаптивная вёрстка</li>
+      </ul>
+    </section>
+
+    <section class="goals">
+      <h2>Эмнени азыр мен окуп жатам!</h2>
+      <p>
+        Углубляюсь в TypeScript, учусь работать с базами данных и REST API, а также экспериментирую с Next.js.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Байланышка чыгуу</h2>
+      <form>
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Атыныз" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Электронный дарегиниз" required>
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" placeholder="Сообщенияныз" rows="5" required></textarea>
+
+        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Жонотуу</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Миржигит| Веб-разработчик</p>
+    <div class="social-links">
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+  <script>
+    const switchToggle = document.getElementById('themeSwitch');
+    const body = document.body;
+  
+    // Сохраняем предпочтения в localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      switchToggle.checked = true;
+    }
+  
+    switchToggle.addEventListener('change', () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+  
+</body>
+</html>
